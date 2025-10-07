@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Página con Chatbot</title>
+
+  <!-- 🔹 Estilos del chatbot -->
+  <link
+    rel="stylesheet"
+    href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css"
+  />
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #0056d6;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    footer {
+      background: #e0e0e0;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    /* 🔹 Estilos personalizados del chatbot */
+    df-messenger {
+      z-index: 999;
+      position: fixed;
+      --df-messenger-font-color: #000;
+      --df-messenger-font-family: Google Sans, Arial, sans-serif;
+      --df-messenger-chat-background: #f3f6fc;
+      --df-messenger-message-user-background: #d3e3fd;
+      --df-messenger-message-bot-background: #fff;
+      bottom: 16px;
+      right: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Bienvenido a Mi Página</h1>
+  </header>
+
+  <main>
+    <div>
+      <h2>Hola 👋</h2>
+      <p>Explora esta página y conversa con nuestro chatbot si necesitas ayuda.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Dennys | Chatbot Demo</p>
+  </footer>
+
+  <!-- 🔹 Script del chatbot -->
+  <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+
+  <!-- 🔹 Chatbot de Dialogflow -->
+  <df-messenger
+    project-id="zeta-sky-457614-r7"
+    agent-id="bdcaa285-5f2d-422a-8c78-b73891ab5f8c"
+    language-code="en"
+    max-query-length="-1"
+  >
+    <df-messenger-chat-bubble chat-title="dennys0987">
+    </df-messenger-chat-bubble>
+  </df-messenger>
+</body>
+</html>
